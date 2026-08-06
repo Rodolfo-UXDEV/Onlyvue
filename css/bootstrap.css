@@ -8,16 +8,17 @@
 /* Inicio CSS Personalizado */
 
 .hero-home {
-  background-image: url(../media/imagem-banner.png);
+  /* O gradiente com a cor vem antes da URL da imagem */
+  background-image: linear-gradient(rgba(12, 191, 222, 0.4), rgba(12, 191, 222, 0.4)), url(../media/imagem-banner.png);
   background-position: center;
   background-size: cover;
-  height: 70vh;
+  height: 85vh;
   width: 100%;
 }
 
 @media screen and (max-width: 768px) {
   .hero-home {
-    background-image: url(../media/imagem-mobile.jpeg);
+    background-image: linear-gradient(rgba(12, 191, 222, 0.4), rgba(12, 191, 222, 0.4)), url(../media/imagem-mobile.jpeg);
     background-position: center;
     background-size: cover;
     height: 70vh;
@@ -33,474 +34,152 @@
   transition: padding .25s ease;
 }
 
+
 .hero-card:hover {
   padding-bottom: 10px;
 }
 
-.ajuste-notify {
-  top: 10px !important;
-  left: 54px !important;
-  width: 320px !important;
+@property --angulo {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
 }
 
-.valid {
-  color: green;
-  font-size: 12px;
-}
-
-.invalid {
-  color: red;
-  font-size: 12px;
-}
-
-.password-container {
+/* Estilo botão */
+.botao-borda-pulsante {
   position: relative;
-}
-
-.password-container .toggle-password {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: gray;
-}
-
-.filtro-container {
-  position: relative;
-}
-
-.filtro-container .toggle-location {
-  position: absolute;
-  left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: gray;
-}
-
-.ajuste-placeholder.form-control {
-  padding-left: 38px;
-  padding-top: 14px;
-  padding-bottom: 14px;
-}
-
-#meuElemento {
-  display: none;
-  /* Começa escondido */
-  position: fixed;
-}
-
-#contatoFixo {
-  display: none;
-  /* Começa escondido */
-  position: fixed;
-}
-
-.Banner-Top {
-  /* height: 237px; */
-  width: 100%;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 0px;
-}
-
-@media (max-width: 576px) {
-  .navbar {
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .hide {
-    transform: translateY(-100%);
-  }
-
-  .hide-footer {
-    transform: translateY(100%);
-  }
-}
-
-.carousel-item img {
-  width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  object-position: center center !important;
-}
-
-.carrocel-espaco {
-  width: 570px !important;
-}
-
-.card-dash {
-  height: 208px;
-}
-
-@media (max-width: 576px) {
-  .carrocel-espaco {
-    width: 340px !important;
-  }
-
-  .card-dash {
-    height: auto !important;
-  }
-}
-
-label.active-label:has(input.form-check-input:checked) {
-  background-color: #fff5f5 !important;
-  border-color: #0D7DD9 !important;
-}
-
-.active:checked {
-  background-color: #0D7DD9 !important;
-  border-color: #0D7DD9 !important;
-  box-shadow: 0 0 0 0.25rem rgba(196, 22, 23, 0.25) !important;
-}
-
-
-
-/*--- CSS Formulário ---*/
-
-.text-muted-light {
-  color: #aaa !important;
-}
-
-.text-highlight-pink {
-  color: #0D7DD9;
-}
-
-.text-highlight-red {
-  color: #E53935;
-}
-
-.btn-pink {
-  background-color: #0D7DD9;
+  padding: 3px; 
+  background: transparent;
   border: none;
-  color: #fff;
-  font-weight: 700;
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.375rem;
+  border-radius: 100px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 50px;
+  
+  /* AANIMAÇÃO AUTOMÁTICA: Roda direto em loop */
+  animation: pulsarBotao 1.5s infinite ease-in-out;
 }
 
-.btn-pink:hover {
-  background-color: #0066BA;
-  color: #fff;
-}
-
-.btn-outline-pink {
-  border-color: #0D7DD9;
-  color: #0D7DD9;
-  font-weight: 700;
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.375rem;
-}
-
-.btn-outline-pink:hover {
-  background-color: #0D7DD9;
-  color: #fff;
-}
-
-/* --- Stepper (Barra de Progresso) --- */
-.stepper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.botao-borda-pulsante span {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 26px;
+  line-height: 32px;
   position: relative;
-}
-
-.step-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1;
-}
-
-.step-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #dee2e6;
-  color: #868e96;
+  z-index: 2;
+  background-color: #ffffff;
+  color: #0CBFDE;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 60px;
+  padding-right: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
-  border: 2px solid #ced4da;
-  transition: all 0.3s ease;
+  gap: 10px;
+  border-radius: 100px;
 }
 
-.step-item.active .step-icon {
-  background-color: #0D7DD9;
-  border-color: #0D7DD9;
-  color: #fff;
-}
-
-.step-item.completed .step-icon {
-  background-color: #4DB6AC;
-  /* Verde do "Continuar" */
-  border-color: #4DB6AC;
-  color: #fff;
-}
-
-.stepper::before {
+.botao-borda-pulsante::before {
   content: '';
   position: absolute;
-  top: 20px;
-  left: 0%;
-  right: 0%;
-  height: 2px;
-  background-color: #555;
-  z-index: 0;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: conic-gradient(from var(--angulo), transparent, #ffffff, #0CBFDE, transparent);
+  z-index: 1;
+  
+  /* ANIMAÇÃO AUTOMÁTICA: Gira a borda direto em loop */
+  animation: rodarBorda 2s linear infinite;
 }
 
-.step-connector {
-  flex-grow: 1;
-}
-
-/* Radios Customizados */
-.form-check-input[type="radio"] {
-  border: 2px solid #aaa;
-  background-color: transparent;
-}
-
-.form-check-input[type="radio"]:checked {
-  background-color: #0D7DD9;
-  border-color: #0D7DD9;
-  box-shadow: none;
-}
-
-.form-check-label {
-  font-size: 0.9rem;
-}
-
-/* --- Step 2: Botões de Tag --- */
-.tag-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.tag-btn {
-  background-color: transparent;
-  border: 1px solid #ced4da;
-  color: #adb5bd;
-  padding: 0.375rem 1rem;
-  border-radius: 0.375rem;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
-}
-
-.tag-btn.active,
-.tag-btn:hover {
-  background-color: #0D7DD9;
-  border-color: #0D7DD9;
-  color: #fff;
-}
-
-/* --- Step 3: Upload de Imagem --- */
-.image-preview-box {
-  width: 150px;
-  height: 250px;
-  border: 2px dashed #0D7DD9;
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #0D7DD930;
-  position: relative;
-}
-
-.image-preview-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0.5rem;
-}
-
-.image-preview-controls {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 0.5rem;
-}
-
-.image-preview-controls .btn-icon {
-  background-color: #0D7DD9;
-  color: #fff;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-}
-
-.image-preview-controls .btn-icon.delete {
-  background-color: #444;
-}
-
-.upload-placeholder {
-  font-size: 3rem;
-  color: #0D7DD9;
-}
-
-.btn-add-image {
-  background-color: #3a3a3a;
-  border: 1px solid #555;
-  color: #f0f0f0;
-}
-
-/* --- Step 4: Estilos dos Planos (Copiados de selecao-planos.html) --- */
-
-.plan-card.active,
-.time-card.active,
-.upgrade-card-item.active {
-  border-color: #E53935;
-  box-shadow: 0 0 15px rgba(229, 57, 53, 0.3);
-}
-
-.time-card .list-group-item {
-  background-color: transparent;
-  border: none;
-  color: #f0f0f0;
-  padding: 0.75rem 1.25rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-}
-
-.time-card .list-group-item.active {
-  background-color: #E53935;
-  border-radius: 0.375rem;
-  color: #fff;
-}
-
-.time-card .list-group-item .bi-check-lg {
-  font-size: 1.25rem;
-  margin-right: 0.75rem;
-}
-
-.btn-continue {
-  background-color: #4DB6AC;
-  /* Verde-azulado da imagem */
-  border: none;
-  font-weight: 700;
-  padding: 0.75rem;
-}
-
-.btn-continue:hover {
-  background-color: #26a69a;
-}
-
-/* Switch Customizado */
-.form-check-input:checked {
-  background-color: #E91E63;
-  border-color: #E91E63;
-}
-
-.form-check-input:focus {
-  box-shadow: 0 0 0 0.25rem rgba(233, 30, 99, 0.25);
-  border-color: #E91E63;
-}
-
-
-/* Estilo da seção injetada dentro do card */
-.injected-upgrades {
-  border-top: 1px dashed #555;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  animation: fadeIn 0.4s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
+/* Mantemos os mesmos keyframes anteriores */
+@keyframes rodarBorda {
   to {
-    opacity: 1;
-    transform: translateY(0);
+    --angulo: 360deg;
   }
 }
 
-/* Estilos Específicos do Carrinho para manter consistência visual (DRY) */
-:root {
-  --primary-red: #E91E63;
-  /* Sua cor principal */
-  --primary-red-hover: #D81B60;
+@keyframes pulsarBotao {
+  0% {
+    transform: scale(1);
+    /* Inicia com a cor #0CBFDE (ciano) transparente */
+    box-shadow: 0 0 0 0 rgba(12, 191, 222, 0.4);
+  }
+  50% {
+    transform: scale(1.04);
+    /* Brilho expandido mesclando o ciano com o #ffffff (branco) */
+    box-shadow: 0 0 20px 8px rgba(12, 191, 222, 0.7), 
+                0 0 10px 2px rgba(255, 255, 255, 0.9);
+  }
+  100% {
+    transform: scale(1);
+    /* Retorna ao estado inicial */
+    box-shadow: 0 0 0 0 rgba(12, 191, 222, 0.4);
+  }
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f8f9fa;
+.btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 35px;
+  line-height: 65px; /* Alinha o ícone verticalmente */
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  animation: pulsar 2s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.text-highlight-red {
-  color: var(--primary-red) !important;
+.btn-whatsapp svg{
+  width: 40px;
 }
 
-.btn-red {
-  background-color: var(--primary-red);
-  color: white;
-  border: none;
+/* Efeito ao passar o mouse */
+.btn-whatsapp:hover {
+  transform: scale(1.1);
+  background-color: #20ba5a;
 }
 
-.btn-red:hover {
-  background-color: var(--primary-red-hover);
-  color: white;
+/* Animação de Pulso */
+@keyframes pulsar {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
 }
 
-.payment-option-card {
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border: 2px solid transparent;
+/* Responsividade: reduz o tamanho em telas menores (Mobile) */
+@media (max-width: 768px) {
+    .btn-whatsapp {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        line-height: 55px;
+        bottom: 15px;
+        right: 15px;
+    }
+    .btn-whatsapp svg{
+        width: 30px;
+    }
 }
 
-.payment-option-card:hover {
-  transform: translateY(-2px);
-}
-
-/* Input Radio escondido, estilizando o Label pai */
-.btn-check:checked+.payment-option-card {
-  border-color: var(--primary-red);
-  background-color: #fff0f5;
-  /* Um rosa bem claro */
-}
-
-.summary-card {
-  position: sticky;
-  top: 20px;
-  /* Faz o resumo acompanhar o scroll */
-}
-
-/* Animação para o QR Code */
-.qr-blur {
-  filter: blur(4px);
-  transition: filter 0.3s;
-}
-
-.qr-blur:hover {
-  filter: blur(0);
-}
-
-
- /* CSS Carrinho */
- #action-container {
-   opacity: 0;
-   transform: translateY(10px);
-   transition: all 0.3s ease-in-out;
-   visibility: hidden;
- }
-
- #action-container.visible {
-   opacity: 1;
-   transform: translateY(0);
-   visibility: visible;
- }
-/*-----------------------------------*/
+/* ---------------------------------------------------------- */
 
 :root,
 [data-bs-theme=light] {
@@ -9401,6 +9080,10 @@ fieldset:disabled .btn {
   width: 75% !important;
 }
 
+.w-85 {
+  width: 85% !important;
+}
+
 .w-100 {
   width: 100% !important;
 }
@@ -9961,6 +9644,11 @@ fieldset:disabled .btn {
   padding-bottom: 3rem !important;
 }
 
+.py-6 {
+  padding-top: 4.5rem !important;
+  padding-bottom: 4.5rem !important;
+}
+
 .pt-0 {
   padding-top: 0 !important;
 }
@@ -9983,6 +9671,10 @@ fieldset:disabled .btn {
 
 .pt-5 {
   padding-top: 3rem !important;
+}
+
+.pt-6 {
+  padding-top: 4.5rem !important;
 }
 
 .pe-0 {
