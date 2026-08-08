@@ -28,7 +28,7 @@
 
 .hero-card {
   width: 100%;
-  min-height: 280px;
+  min-height: 250px;
   background-size: cover;
   background-position: center;
   transition: padding .25s ease;
@@ -61,18 +61,18 @@
 }
 
 .botao-borda-pulsante span {
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 32px;
   position: relative;
   z-index: 2;
   background-color: #ffffff;
-  color: #0CBFDE;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  padding-left: 60px;
-  padding-right: 60px;
+  color: #0D7DD9;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,7 +87,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background-image: conic-gradient(from var(--angulo), transparent, #ffffff, #0CBFDE, transparent);
+  background-image: conic-gradient(from var(--angulo), transparent, #ffffff, #0D7DD9, transparent);
   z-index: 1;
   
   /* ANIMAÇÃO AUTOMÁTICA: Gira a borda direto em loop */
@@ -104,7 +104,7 @@
 @keyframes pulsarBotao {
   0% {
     transform: scale(1);
-    /* Inicia com a cor #0CBFDE (ciano) transparente */
+    /* Inicia com a cor #0D7DD9 (ciano) transparente */
     box-shadow: 0 0 0 0 rgba(12, 191, 222, 0.4);
   }
   50% {
@@ -5541,7 +5541,7 @@ fieldset:disabled .btn {
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
   --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23052c65' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
-  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(196, 22, 23, 0.25);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 125, 217, 0.25);
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-active-color: var(--bs-primary-text-emphasis);
@@ -9068,20 +9068,56 @@ fieldset:disabled .btn {
   width: 25% !important;
 }
 
+.w-30 {
+  width: 30% !important;
+}
+
 .w-35 {
   width: 35% !important;
+}
+
+.w-40 {
+  width: 40% !important;
+}
+
+.w-45 {
+  width: 45% !important;
 }
 
 .w-50 {
   width: 50% !important;
 }
 
+.w-55 {
+  width: 55% !important;
+}
+
+.w-60 {
+  width: 60% !important;
+}
+
+.w-65 {
+  width: 65% !important;
+}
+
+.w-70 {
+  width: 70% !important;
+}
+
 .w-75 {
   width: 75% !important;
 }
 
+.w-80 {
+  width: 80% !important;
+}
+
 .w-85 {
   width: 85% !important;
+}
+
+.w-90 {
+  width: 90% !important;
 }
 
 .w-100 {
@@ -9090,10 +9126,6 @@ fieldset:disabled .btn {
 
 .w-auto {
   width: auto !important;
-}
-
-.w-personalizado{
-  width: 284px;
 }
 
 .mw-100 {
@@ -9649,6 +9681,11 @@ fieldset:disabled .btn {
   padding-bottom: 4.5rem !important;
 }
 
+.py-7 {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+}
+
 .pt-0 {
   padding-top: 0 !important;
 }
@@ -9879,11 +9916,8 @@ fieldset:disabled .btn {
   font-size: .75rem !important;
 }
 
-.fs-9 {
-  font-size: .875rem !important;
-}
 
-.fs-10 {
+.fs-9 {
   font-size: .65rem !important;
 }
 
