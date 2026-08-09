@@ -20,7 +20,7 @@ export class MDHeaderpub extends HTMLElement {
             <nav class="navbar navbar-light bg-white pb-3 pt-3">
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
-                        <img src="media/logo-onlyvue.jpg" width="140" alt="Volkka Logo">
+                        <img src="media/logo-onlyvue.png" width="140" alt="Volkka Logo">
                     </a>
 
                     <div class="d-flex align-items-center">
@@ -43,10 +43,10 @@ export class MDHeaderpub extends HTMLElement {
                                 </li>
                                 <a href="#" class="text-decoration-none">
                                     <li class="d-flex justify-content-start align-items-center gap-2">
-                                        <img src="media/butterfly-blue.svg" height="30px" alt="">
+                                        <img src="media/logo-fogo-preto.png" height="30px" alt="">
                                         <div>
-                                            <p class="fw-semibold fs-7 m-0 p-0 text-dark">Novidade na Volkka!</p>
-                                            <p class="fs-10 m-0 p-0 text-dark">há 1 semana</p>
+                                            <p class="fw-semibold fs-7 m-0 p-0 text-dark">Você ta preste a faturar 6 dígitos mensais com a onlyvue afiliasse agora.</p>
+                                            <p class="fs-9 m-0 p-0 text-dark">há 1 semana</p>
                                         </div>
                                     </li>
                                 </a>
