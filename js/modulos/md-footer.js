@@ -32,8 +32,7 @@ export class MDFooter extends HTMLElement{
                         </p>
                     </div>
                     <p class="fs-6 text-start text-gray ms-0 ms-md-4">
-                        Onlyvue é a maior plataforma de publicidade para acompanhantes independentes no mundo. Navegue por milhares de
-                        novos anúncios de acompanhantes atraentes de todo o mundo. <a href="#" class="link-red link-red:hover fw-bold">Disponível em 29 países.</a>
+                        A <strong style="color: #0D7DD9;">OnlyVue</strong> é uma das maiores plataformas de publicidade para acompanhantes do mundo. A OF Boss transforma essa experiência em estratégia, marketing e monetização para creators de todo o mundo.
                     </p>
                 </div>
 
