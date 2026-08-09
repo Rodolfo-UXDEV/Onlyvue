@@ -10109,6 +10109,10 @@ fieldset:disabled .btn {
   color: #11ABE3 !important;
 }
 
+.text-blue-2 {
+  color: #0D7DD9 !important;
+}
+
 .text-teal {
   color: var(--bs-teal);
 }
