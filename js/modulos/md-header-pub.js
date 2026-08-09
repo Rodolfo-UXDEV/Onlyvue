@@ -17,7 +17,7 @@ export class MDHeaderpub extends HTMLElement {
                 }
             </style>
 
-            <nav class="navbar navbar-light bg-white pb-3 pt-3">
+            <nav class="navbar navbar-light bg-white pb-3 pt-3 fixed-top">
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
                         <img src="media/logo-onlyvue.png" width="140" alt="Volkka Logo">
